@@ -14,26 +14,66 @@
   </head>
 
     <body id="home" data-spy="scroll" data-offset="100">
-        <div class="container mt-4 mb-5">
-            <div class="row d-flex justify-content-center">
+        <div class="container">
+            <div class="row mt-4 d-flex justify-content-center mb-4">
                 <h1>Générateur de citations</h1>
             </div>
-        </div>
-        <div class="container height align-items-center d-flex justify-content-center mt-4 mb-5">            
-            <h2>Cliquez sur le bouton pour lancer le générateur ! 🚀</h2>
-        </div>
-        <div class="container mt-5">
-            <div class="row d-flex justify-content-center">
-                <a id="button" href="#"><img src="img/button.png" class="grow img-responsive d-flex" alt="button-image" style="width:40%;margin:auto"></a>
+            <div class="row d-flex justify-content-center mb-4">            
+                <h2>Cliquez sur le bouton pour lancer le générateur ! 🚀</h2>
+            </div>
+            <div class="row d-flex justify-content-center mb-5">
+                <a id="button" href="#"><img src="img/button.png" class="grow img-responsive d-flex" alt="button-image" style="width:30%;margin:auto"></a>
+            </div>
+            <div class="row d-none" id="generateur">
+                <div class="d-flex flex-row">
+                    <div class="col-lg-6">
+                        <div class="mb-4 text-center">
+                            <h3 class="bgColor">Sélectionnez un type de citations</h3>
+                        </div>
+                        <select id="citationTypeSelect" class="form-control form-control-lg">
+                            <option value="festival">Les festivals de musique</option>
+                            <option value="villes">Les villes</option>
+                        </select>	
+                    </div>
+                    <div class="col-lg-6 text-center mb-5">
+                        <h3 class="mb-4 bgColor">Combien voulez-vous de citations ?</h3>
+                        <div class="form-check form-check-inline" id="inlineRadio">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1" checked>
+                            <label class="form-check-label" for="inlineRadio1">1</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2" required>
+                            <label class="form-check-label" for="inlineRadio2">2</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3" required>
+                            <label class="form-check-label" for="inlineRadio3">3</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4" required>
+                            <label class="form-check-label" for="inlineRadio4">4</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5" required>
+                            <label class="form-check-label" for="inlineRadio5">5</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 text-center" id="btnGenere">
+                        <button onclick="getPhrase()" type="button" class="btn btn-primary btn-lg" id="generate">Générer</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12" id="citationsBloc">
+                    </div>
+                </div>
             </div>
         </div>
-        <div id="generateur" class="d-none">
-            <h1>Generateur</h1>
-        </div>
-<script src="./app.js">
-</script>
+
+<script src="./app.js"></script>
+<script src="./citation_double.js"></script>
 
 
     </body>
 </html>
-
