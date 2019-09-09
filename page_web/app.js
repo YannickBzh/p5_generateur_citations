@@ -125,13 +125,31 @@ nbCitationsValue.addEventListener("click", function(number) {
     nbCitations = number.type.innerHTML
 })
 
+let nbCitation = 1
+
 // J'écoute le bouton Générer
 generateBtn.addEventListener("click", function() {
-    let generatedCitation1 = generateur1.genererCitation();
-    let generatedCitation2 = generateur2.genererCitation();
-    if (typeCitationsValue.value === "festival") {
-    return generateur1.showCitations(generatedCitation1)
-    } else return generateur2.showCitations(generatedCitation2)
+    // let generatedCitation1 = generateur1.genererCitation();
+    // let generatedCitation2 = generateur2.genererCitation();
+    // if (typeCitationsValue.value === "festival") {
+    // return generateur1.showCitations(generatedCitation1)
+    // } else return generateur2.showCitations(generatedCitation2)
+
+    /**
+     * REVIEW:
+     *  Maintenant qu'on a le nbCitation dynamique, faire une boucle for pour afficher le nombre de citations souhaitées.
+     */
+
+    console.log(nbCitation)
+
+    if (nbCitation == 1) {
+      console.log('Je veux une citation')
+    } else {
+      console.log('Je veux plusieurs citations')
+    }
 })
 
+nbCitationsValue.addEventListener('click', function(e) {
+  nbCitation = e.target.value
+})
 
