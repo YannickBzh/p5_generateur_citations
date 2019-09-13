@@ -31,32 +31,48 @@ const generateur1 = new Citations(
   [
     "Au Festival des Vieilles Charrues ",
     "Au Hellfest à Clisson ",
-    "Un jour à Garorock "
+    "À Garorock ",
+    "Aux Eurockéennes ",
+    "À Rock en Seine "
   ],
   [
-    "ils ont mis du temps ",
+    "on a mis du temps ",
     "il y a toujours des gars qui tiennent ",
-    "les programmateurs nous ont incité "
+    "les programmateurs nous ont incité ",
+    "les tartiflettes nous obligent ",
+    "le climat n'aide pas "
   ],
   [
     "à trouver un distributeur d'eau.",
-    "à montrer leur fesses.",
-    "à aller voir Rammstein."
+    "à baisser le son de la musique.",
+    "à aller voir Rammstein.",
+    "à trouver des toilettes.",
+    "à trouver l'âme soeur."
   ]
 )
 
 // Création de l'objet "generateur2" (Instanciation)
 const generateur2 = new Citations(
-  ["A Las Vegas ", "Quand tu vas à Brest ", "En été à Bordeaux "],
+  [
+    "À Las Vegas ",
+    "Si tu vas à Brest ",
+    "En été à Bordeaux ",
+    "À Paris ",
+    "Sur les hauteurs de Saint-Jean-de-Luz ",
+  ],
   [
     "quand tu sors le soir ",
     "pas loin du centre ville ",
-    "en passant sous un pont "
+    "en passant sous un pont ",
+    "sans le vouloir ",
+    "en septembre "
   ],
   [
     "il faut des lunettes de soleil.",
     "t'as vite fait de croiser un faux Elvis.",
-    "tu peux entendre le chant des sirènes."
+    "tu peux entendre le chant des sirènes.",
+    "les touristes affluent en masse.",
+    "tu peux acheter de la contrefaçon."
   ]
 )
 
@@ -88,12 +104,12 @@ generateBtn.addEventListener("click", function () {
   let generatedCitation = ""
   if (typeCitationsValue.value === "festival") {
     for (i = 1; i <= nbCitation; i++) {
-      generatedCitation += generateur1.genererCitation() + "\n" ;
+      generatedCitation += generateur1.genererCitation() + "\n";
     }
     generateur1.showCitations(generatedCitation)
   } else {
     for (i = 1; i <= nbCitation; i++) {
-      generatedCitation += generateur2.genererCitation() + "\n" ;
+      generatedCitation += generateur2.genererCitation() + "\n";
     }
     generateur2.showCitations(generatedCitation)
   }
