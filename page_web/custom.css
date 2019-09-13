@@ -43,3 +43,16 @@ h2 {
     color: black;
     border-color: #D8CA97 !important;
 }
+
+.yg-flex {
+    display:flex;
+}
+
+@media(max-width: 768px) {
+    .yg-flex {
+        display:inherit;
+    }
+    .form-control-lg {
+        margin-bottom:8%;
+    }
+}
